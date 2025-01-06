@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Project</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .project-image {
+                width: 100%;
+                height: auto;
+                max-height: 600px; /* Set a maximum height */
+                transition: transform 0.3s ease, left 0.3s ease, top 0.3s ease;
+                position: relative;
+                object-fit: cover; /* Ensure the image covers the area */
+                cursor: pointer; /* Change cursor to pointer */
+            }
+            .project-image:hover {
+                transform: scale(1.1);
+                left: 10px;
+                top: 10px;
+            }
+            .project-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .project-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+            .fullscreen-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+            .fullscreen-overlay img {
+                max-width: 90%;
+                max-height: 90%;
+            }
+            .fullscreen-overlay .close-btn {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 30px;
+                color: white;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body class="d-flex flex-column h-100 bg-light">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">PROJECT</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Projects Section-->
+            <section class="py-5">
+                <div class="container px-5 mb-5">
+                    <div class="text-center mb-5">
+                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-11 col-xl-9 col-xxl-8">
+                            <!-- Project Card 1-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5 project-card">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder">Spam Detection Using AI</h2>
+                                            <p>It’s a Machine Learning project that utilizes a pre-trained dataset. Users can input a message in the text field, and the system classifies it as either spam or not, It uses Streamlit for the frontend.</p>
+                                            <a class="btn btn-outline-primary" href="https://github.com/Sarvesh-N/spam_detection" target="_blank">View on GitHub</a>
+                                        </div>
+                                        <!-- <img class="img-fluid project-image" src="project_images/spam.png" alt="..." onclick="openFullscreen(this)" /> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 2-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5 project-card">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder">Conversatinal Image Recogonization Chatbot</h2>
+                                            <p>It is a project that recognizes the image uploaded by the user with BLIP and provides a description based on the user's query using Llama2 , Uses Streamlit for the frontend. The system integrates image recognition and natural language processing to deliver accurate responses.</p>
+                                            <a class="btn btn-outline-primary" href="https://github.com/Sarvesh-N/converstational_image_recogonaiization_chatbot" target="_blank">View on GitHub</a>
+                                        </div>
+                                        <!-- <img class="img-fluid project-image" src="project_images/bot.png" alt="..." onclick="openFullscreen(this)" /> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 3-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5 project-card">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder">Site Seeker</h2>
+                                            <p>This project utilizes BeautifulSoup to scrape data from the web based on the user's input. It searches across various websites related to the prompt, analyzes the collected data, and visualizes the results by plotting a bar chart using Matplotlib and uses Streamlit for the UI .</p>
+                                            <a class="btn btn-outline-primary" href="https://github.com/Sarvesh-N/Site_seeker" target="_blank">View on GitHub</a>
+                                        </div>
+                                        <!-- <img class="img-fluid project-image" src="project_images/web_scrapper.png" alt="..." onclick="openFullscreen(this)" /> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Fullscreen Overlay -->
+            <div class="fullscreen-overlay" id="fullscreenOverlay">
+                <span class="close-btn" onclick="closeFullscreen()">&times;</span>
+                <img id="fullscreenImage" src="" alt="Fullscreen Image" />
+            </div>
+            <!-- Call to action section-->
+            <section class="py-5 bg-gradient-primary-to-secondary text-white">
+                <div class="container px-5 my-5">
+                    <div class="text-center">
+                        <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <!--<div class="col-auto"><div class="small m-0">Copyright &copy; Your Website 2023</div></div>
+                    <div class="col-auto">
+                        <a class="small" href="#!">Privacy</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!">Terms</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!">Contact</a>
+                    </div>-->
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+            function openFullscreen(img) {
+                var overlay = document.getElementById('fullscreenOverlay');
+                var fullscreenImg = document.getElementById('fullscreenImage');
+                fullscreenImg.src = img.src;
+                overlay.style.display = 'flex';
+            }
+
+            function closeFullscreen() {
+                var overlay = document.getElementById('fullscreenOverlay');
+                overlay.style.display = 'none';
+            }
+
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    closeFullscreen();
+                }
+            });
+        </script>
+    </body>
+</html>

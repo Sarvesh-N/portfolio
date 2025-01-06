@@ -1,0 +1,98 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description" content="")
+    meta(name="author" content="")
+    title Contact
+    // Favicon
+    link(rel="icon" type="image/x-icon" href="assets/favicon.ico")
+    // Custom Google font
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet")
+    // Bootstrap icons
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet")
+    // Core theme CSS (includes Bootstrap)
+    link(href="css/styles.css" rel="stylesheet")
+  body.d-flex.flex-column
+    main.flex-shrink-0
+      // Navigation
+      nav.navbar.navbar-expand-lg.navbar-light.bg-white.py-3
+        .container.px-5
+          a.navbar-brand(href="index.html")
+            span.fw-bolder.text-primary CONTACT
+          button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+          .collapse.navbar-collapse#navbarSupportedContent
+            ul.navbar-nav.ms-auto.mb-2.mb-lg-0.small.fw-bolder
+              li.nav-item
+                a.nav-link(href="index.html") Home
+              li.nav-item
+                a.nav-link(href="resume.html") Resume
+              li.nav-item
+                a.nav-link(href="projects.html") Projects
+              li.nav-item
+                a.nav-link(href="contact.html") Contact
+      // Page content
+      section.py-5
+        .container.px-5
+          // Contact form
+          .bg-light.rounded-4.py-5.px-4.px-md-5
+            .text-center.mb-5
+              .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.mb-3
+                i.bi.bi-envelope
+              h1.fw-bolder Get in touch
+              p.lead.fw-normal.text-muted.mb-0 Let's work together!
+            .row.gx-5.justify-content-center
+              .col-lg-8.col-xl-6
+                // Formspree Contact Form
+                form#contactForm(action="https://formspree.io/f/mgvvplrb" method="POST")
+                  // Name input
+                  .form-floating.mb-3
+                    input.form-control(id="name" name="name" type="text" placeholder="Enter your name..." required)
+                    label(for="name") Full name
+                    .invalid-feedback A name is required.
+                  // Email address input
+                  .form-floating.mb-3
+                    input.form-control(id="email" name="email" type="email" placeholder="name@example.com" required)
+                    label(for="email") Email address
+                    .invalid-feedback An email is required.
+                  // Phone number input
+                  .form-floating.mb-3
+                    input.form-control(id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required)
+                    label(for="phone") Phone number
+                    .invalid-feedback A phone number is required.
+                  // Message input
+                  .form-floating.mb-3
+                    textarea.form-control(id="message" name="message" placeholder="Enter your message here..." style="height: 10rem" required)
+                    label(for="message") Message
+                    .invalid-feedback A message is required.
+                  // Submit success message
+                  .d-none#submitSuccessMessage
+                    .text-center.mb-3
+                      .fw-bolder Form submission successful!
+                      | Thank you for getting in touch!
+                  // Submit error message
+                  .d-none#submitErrorMessage
+                    .text-center.text-danger.mb-3 Error sending message!
+                  // Submit Button
+                  .d-grid
+                    button.btn.btn-primary.btn-lg#submitButton(type="submit") Submit
+    // Footer
+    footer.bg-white.py-4.mt-auto
+      .container.px-5
+        .row.align-items-center.justify-content-between.flex-column.flex-sm-row
+          // .col-auto
+          //   .small.m-0 Copyright &copy; Your Website 2023
+          // .col-auto
+          //   a.small(href="#!") Privacy
+          //   span.mx-1 &middot;
+          //   a.small(href="#!") Terms
+          //   span.mx-1 &middot;
+          //   a.small(href="#!") Contact
+    // Bootstrap core JS
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js")
+    // Core theme JS
+    script(src="js/scripts.js")
